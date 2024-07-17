@@ -1,0 +1,11 @@
+/* Centering the nav items */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: x-large;
+}
+
+.nav-link {
+  color: white !important;
+}
