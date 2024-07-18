@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <div style={{background:"#56CCF2", height:"150px"}}>
+      <div style={{background:"#56CCF2", height:"150px", width:"100%"}}>
          <h1 style={{ textAlign: "center", color: "white", fontSize: "50px", paddingRight:"800px", paddingTop:"20px"}}>
           The Generics
          </h1>

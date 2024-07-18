@@ -2,6 +2,22 @@ import React from "react";
 import Table from "react-bootstrap/esm/Table";
 
 const Home = () => {
+
+    const fetchMovieHandler = async () => { // Use async/await for cleaner syntax
+        try {
+          const response = await fetch("https://swapi.dev/api/films"); // Corrected URL
+      
+          if (!response.ok) { // Check for successful response
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+      
+          const data = await response.json();
+          console.log("Movies fetched successfully:", data); // Log the data
+        } catch (error) {
+          console.error("Error fetching movies:", error);
+        }
+      };
+
   return (
     <div>
       <h2 style={{ textAlign: "center", paddingTop: "20px" }}>TOURS</h2>
@@ -58,6 +74,7 @@ const Home = () => {
           </tr>
         </tbody>
       </Table>
+      <button onClick={fetchMovieHandler}>fetch</button>
     </div>
   );
 };
