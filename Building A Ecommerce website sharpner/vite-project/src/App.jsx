@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Store from "./components/Store";
 import About from "./components/About";
+import ErrorPage from "./components/ErrorPage";
 
 const App = () => {
   return (
@@ -19,10 +20,11 @@ const App = () => {
 
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />}  />
         <Route path="/store" element={<Store />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <div style={{background:"#56CCF2", height:"150px", width:"100%"}}>
          <h1 style={{ textAlign: "center", color: "white", fontSize: "50px", paddingRight:"800px", paddingTop:"20px"}}>
